@@ -15,13 +15,13 @@ const Navbar = () => {
   const removeAddPost = 'https://image-sharing-application.netlify.app/createPost'
   const logout = () => {
     dispatch({ type: LOGOUT })
-    navigate('/posts')
+    navigate('/')
     setUser(null)
     dispatch({ type: RESET })
     //window.location.reload(false)
   }
   const locationChange = () => {
-    navigate('/posts')
+    navigate('/')
     dispatch({ type: RESET })
     //window.location.reload(false)
   }
