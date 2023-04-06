@@ -48,7 +48,7 @@ const Card = ({ post, setCurrentId }) => {
             {(user?.result?.googleId === post?.creator || user?.result?._id === post?.creator) && (
               <div className="flex flex-col min-w-[80px] items-end">
                 <button className="p-1 hover:bg-tertiary rounded-md" onClick={() => setToggle((prev) => !prev)}>
-                  <img src={ellipsis} className="h-[24px] w-[24px] object-contain" />
+                  <img src={ellipsis} className="h-[24px] w-[24px] object-contain" alt="edit" />
                 </button>
               <div className={`${toggle ? 'flex' : 'hidden'} flex-col bg-tertiary rounded-xl p-4 mt-7 absolute shadow-md`}>
                 <button className="mt-1 font-poppins text-[16px] text-white" onClick={editPost}>Edit</button>
