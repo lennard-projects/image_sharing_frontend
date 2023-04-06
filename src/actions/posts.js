@@ -7,7 +7,7 @@ export const createPost = (post, navigate) => async (dispatch) => {
         dispatch({ type: CREATE, payload: data })
         navigate('/posts')
         dispatch({ type: RESET })
-        window.location.reload(false)
+        //window.location.reload(false)
     } catch (error) {
         console.log(error);
     }
