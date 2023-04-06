@@ -12,7 +12,7 @@ const Navbar = () => {
   const navigate = useNavigate()
   const location = useLocation()
   const getUrl = window.location.href
-  const removeAddPost = 'http://localhost:3000/createPost'
+  const removeAddPost = 'https://image-sharing-api.onrender.com/createPost'
   const logout = () => {
     dispatch({ type: LOGOUT })
     navigate('/posts')
