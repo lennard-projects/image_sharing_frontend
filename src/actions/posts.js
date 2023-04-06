@@ -48,7 +48,7 @@ export const updatePost = (id, post, navigate) => async (dispatch) => {
         dispatch({ type: UPDATE, payload: data })
         navigate('/posts')
         dispatch({ type: RESET })
-        window.location.reload(false)
+        //window.location.reload(false)
     } catch (error) {
         console.log(error);
     }

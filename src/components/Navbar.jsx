@@ -18,12 +18,12 @@ const Navbar = () => {
     navigate('/posts')
     setUser(null)
     dispatch({ type: RESET })
-    window.location.reload(false)
+    //window.location.reload(false)
   }
   const locationChange = () => {
     navigate('/posts')
     dispatch({ type: RESET })
-    window.location.reload(false)
+    //window.location.reload(false)
   }
 /* eslint-disable */
   useEffect(() => {
