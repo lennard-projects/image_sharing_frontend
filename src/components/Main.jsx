@@ -19,16 +19,16 @@ const Main = ({ currentId, setCurrentId }) => {
   if (!posts.length && !isLoading) return 'No posts';
 
   return (
-    <section className="flex flex-col justify-center items-center border-x-[1px] border-x-grayBorder mx-[240px] p-10">
-        <div className="flex flex-col justify-center items-center  p-10 ">
+    <section className="flex flex-col justify-center items-center border-x-[1px] border-x-grayBorder md:mx-[240px] md:p-10 mx-4 py-5">
+        <div>
             {posts?.map((post) => 
                 <div key={post._id} >
                     <Card post={post} setCurrentId={setCurrentId}/>
                 </div>
             )}
             {isLoading ? <CircularProgress /> : (
-                posts.length >= lastPage ? <h2 className="text-white">No more posts.</h2> : (
-                <button onClick={loadmore} className="text-white font-poppins text-[16px]">Load More</button>
+                posts.length >= lastPage ? <h2 className="text-white w-full text-center">No more posts.</h2> : (
+                    <button onClick={loadmore} className="text-white font-poppins text-[16px] w-full">Load More</button>
                 )
             )
             }

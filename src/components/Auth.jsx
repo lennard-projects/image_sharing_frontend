@@ -45,10 +45,10 @@ const Auth = () => {
     onError: errorResponse => console.log(errorResponse)
   })
   return (
-    <section className="items-center justify-center flex">
-      <div className="bg-secondary flex flex-col mx-4 my-12 p-10 items-center rounded-md">
+    <section className="flex items-center justify-center">
+      <div className="bg-secondary flex flex-col mx-2 p-5 my-6 sm:mx-4 sm:my-12 sm:p-10 items-center rounded-md">
         <h2 className="font-semibold font-poppins text-[32px] text-white my-2">{isSignUp ? 'Sign Up' : 'Sign In'}</h2>
-        <form onSubmit={handleSubmit} className="flex flex-col w-[350px]">
+        <form onSubmit={handleSubmit} className="flex flex-col w-[280px] sm:w-[350px]">
           {isSignUp && (
             <>
               <TextField name="firstName" label="First Name" onChange={handleChange} required fullWidth sx={{ marginY: '8px', backgroundColor: 'white' }}/>

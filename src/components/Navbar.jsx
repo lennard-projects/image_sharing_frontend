@@ -35,9 +35,9 @@ const Navbar = () => {
 /* eslint-enable */
   return (
     <nav className="w-full flex flex-row p-4 justify-between border-b-[1px] border-grayBorder">
-      <div className="flex flex-row ml-2 hover:cursor-pointer" onClick={locationChange}>
+      <div className="flex flex-row ml-2 hover:cursor-pointer items-center" onClick={locationChange}>
         <img src={camera48} alt="logo" />
-        <h2 className="text-[32px] text-white font-poppins mx-2">Image Sharing</h2>
+        <h2 className="text-[24px] sm:text-[32px] text-white font-poppins mx-2">Image Sharing</h2>
       </div>
       <div className="flex flex-row mr-2 items-center">
         {user ? (

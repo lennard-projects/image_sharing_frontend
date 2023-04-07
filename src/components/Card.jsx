@@ -33,16 +33,16 @@ const Card = ({ post, setCurrentId }) => {
     
   return (
     
-    <div className="flex flex-col border-[1px] p-2 mb-8 bg-secondary min-w-[750px]">
+    <div className="flex flex-col w-full border-[1px] p-2 mb-8 bg-secondary">
         <div className="flex flex-row items-start justify-between p-2">
             <div className="flex flex-row justify-between" >
                  <div className="flex mt-1">
-                    <Avatar alt={post.name} src={post.profilePic} className="rounded-full w-[32px] h-[32px]">{post.name.charAt(0)}</Avatar>
+                    <Avatar alt={post.name} src={post.profilePic} className="rounded-full w-[24px] h-[24px] sm:w-[32px] sm:h-[32px]">{post.name.charAt(0)}</Avatar>
                 </div> 
                 <div className="flex flex-col ml-4">
-                    <h4 className="font-poppins text-[24px] text-white">{post.email}</h4>
-                    <h4 className="font-poppins text-[24px] text-white">{post.name}</h4>
-                    <h4 className="font-poppins text-[16px] text-dimWhite">{moment(post.createdAt).fromNow()}</h4>
+                    <h4 className="font-poppins text-[16px] sm:text-[24px] text-white">{post.email}</h4>
+                    <h4 className="font-poppins text-[16px] sm:text-[24px] text-white">{post.name}</h4>
+                    <h4 className="font-poppins text-[8px] sm:text-[16px] text-dimWhite">{moment(post.createdAt).fromNow()}</h4>
                 </div>
             </div>
             {(user?.result?.googleId === post?.creator || user?.result?._id === post?.creator) && (
@@ -58,13 +58,13 @@ const Card = ({ post, setCurrentId }) => {
             </div>
             )}
         </div>
-        <div className="p-2 text-dimWhite font-normal">
+        <div className="p-2 text-dimWhite font-normal text-[16px] sm:text-[24px]">
             <h4>{post.message}</h4>
         </div>
        {post.image && 
         <>
           <div className="p-2 justify-center">
-            <img src={post.image} alt="post" className="h-[400px] w-full" />
+            <img src={post.image} alt="post" className="w-full sm:h-[400px] h-[250px]" />
           </div>
         </>}
        <div className="m-4">
