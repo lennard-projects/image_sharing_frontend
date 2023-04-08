@@ -40,7 +40,7 @@ const Navbar = () => {
         <img src={camera48} alt="logo" />
         <h2 className="text-[24px] sm:text-[32px] text-white font-poppins mx-2">Image Sharing</h2>
       </div>
-      <div className="flex flex-row mr-2 items-center">
+      <div className="flex flex-row mr-2 items-center justify-center">
         {user ? (
         <>
         {getUrl !== removeAddPost &&
@@ -50,7 +50,7 @@ const Navbar = () => {
           </Link>
           </>
         }
-            <div className="flex sm:hidden flex-col min-w-[80px] items-end justify-center">
+            <div className="flex sm:hidden flex-col min-w-[80px] items-end">
                 <button className="p-1 rounded-md" onClick={() => setToggle((prev) => !prev)}>
                   <Avatar src={user.result.picture} alt={user.result.name}>{user.result.name.charAt(0)}</Avatar>
                 </button>
