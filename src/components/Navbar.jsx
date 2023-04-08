@@ -40,7 +40,7 @@ const Navbar = () => {
         <img src={camera48} alt="logo" />
         <h2 className="text-[24px] sm:text-[32px] text-white font-poppins mx-2">Image Sharing</h2>
       </div>
-      <div className="flex flex-row mr-2 items-center justify-center">
+      <div className="flex flex-row mr-2 items-center">
         {user ? (
         <>
         {getUrl !== removeAddPost &&
@@ -55,9 +55,9 @@ const Navbar = () => {
                   <Avatar src={user.result.picture} alt={user.result.name}>{user.result.name.charAt(0)}</Avatar>
                 </button>
               <div className={`${toggle ? 'flex' : 'hidden'} flex-col bg-tertiary rounded-xl p-4 mt-12 absolute shadow-2xl`}>
-                <button className="mt-1 font-poppins text-[16px] text-white">{user.result.name}</button>
+                <button className="mt-1 font-poppins text-[16px] text-white font-bold">{user.result.name}</button>
                 <div className="border-t-[1px] border-grayBorder m-2"></div>
-                <button className="mt-1 font-poppins text-[16px] text-white" onClick={logout}>Logout</button>
+                <button className="mt-1 font-poppins text-[16px] text-white font-semibold" onClick={logout}>Logout</button>
               </div>
             </div>
             <div className="hidden sm:flex flex-row items-end">
