@@ -50,7 +50,7 @@ const Navbar = () => {
           </Link>
           </>
         }
-            <div className="flex sm:hidden flex-col min-w-[80px] items-end">
+            <div className="flex sm:hidden flex-col items-end">
                 <button className="p-1 rounded-md" onClick={() => setToggle((prev) => !prev)}>
                   <Avatar src={user.result.picture} alt={user.result.name}>{user.result.name.charAt(0)}</Avatar>
                 </button>
