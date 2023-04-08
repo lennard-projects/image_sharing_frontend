@@ -50,11 +50,11 @@ const Navbar = () => {
           </Link>
           </>
         }
-            <div className="flex sm:hidden flex-col min-w-[80px] items-end">
+            <div className="flex sm:hidden flex-col min-w-[80px] items-end justify-center">
                 <button className="p-1 rounded-md" onClick={() => setToggle((prev) => !prev)}>
                   <Avatar src={user.result.picture} alt={user.result.name}>{user.result.name.charAt(0)}</Avatar>
                 </button>
-              <div className={`${toggle ? 'flex' : 'hidden'} flex-col bg-tertiary rounded-xl p-4 mt-10 absolute shadow-md`}>
+              <div className={`${toggle ? 'flex' : 'hidden'} flex-col bg-tertiary rounded-xl p-4 mt-12 absolute shadow-2xl`}>
                 <button className="mt-1 font-poppins text-[16px] text-white">{user.result.name}</button>
                 <div className="border-t-[1px] border-grayBorder m-2"></div>
                 <button className="mt-1 font-poppins text-[16px] text-white" onClick={logout}>Logout</button>
