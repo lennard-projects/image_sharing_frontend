@@ -46,11 +46,11 @@ const Navbar = () => {
         {getUrl !== removeAddPost &&
           <>
           <Link to='/createPost'>
-            <Button sx={{ marginRight: '16px',  }} variant="contained">Add Post</Button>
+            <Button sx={{ marginRight: '16px' }} variant="contained">Add Post</Button>
           </Link>
           </>
         }
-            <div className="flex md:hidden flex-col min-w-[80px] items-end">
+            <div className="flex sm:hidden flex-col min-w-[80px] items-end">
                 <button className="p-1 hover:bg-tertiary rounded-md" onClick={() => setToggle((prev) => !prev)}>
                   <Avatar src={user.result.picture} alt={user.result.name}>{user.result.name.charAt(0)}</Avatar>
                 </button>
@@ -60,7 +60,7 @@ const Navbar = () => {
                 <button className="mt-1 font-poppins text-[16px] text-white">Delete</button>
               </div>
             </div>
-            <div className="hidden md:flex flex-row items-end">
+            <div className="hidden sm:flex flex-row items-end">
               <Avatar src={user.result.picture} alt={user.result.name}>{user.result.name.charAt(0)}</Avatar>
               <Typography color="white"  sx={{ marginX: "16px"}}>{user.result.name}</Typography>
               <Button variant="contained" color="primary" onClick={logout}>Logout</Button>
