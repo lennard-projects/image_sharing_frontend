@@ -46,7 +46,7 @@ const Navbar = () => {
         {getUrl !== removeAddPost &&
           <>
           <Link to='/createPost'>
-            <Button sx={{ marginRight: '32px' }} variant="contained" >Add Post</Button>
+            <Button sx={{ marginRight: '16px',  }} variant="contained">Add Post</Button>
           </Link>
           </>
         }
@@ -54,13 +54,13 @@ const Navbar = () => {
                 <button className="p-1 hover:bg-tertiary rounded-md" onClick={() => setToggle((prev) => !prev)}>
                   <Avatar src={user.result.picture} alt={user.result.name}>{user.result.name.charAt(0)}</Avatar>
                 </button>
-              <div className={`${toggle ? 'flex' : 'hidden'} flex-col bg-tertiary rounded-xl p-4 mt-7 absolute shadow-md`}>
+              <div className={`${toggle ? 'flex' : 'hidden'} flex-col bg-tertiary rounded-xl p-4 mt-12 absolute shadow-md`}>
                 <button className="mt-1 font-poppins text-[16px] text-white">Edit</button>
                 <div className="border-t-[1px] border-grayBorder m-2"></div>
                 <button className="mt-1 font-poppins text-[16px] text-white">Delete</button>
               </div>
             </div>
-            <div className="hidden md:flex flex-col min-w-[280px] items-end">
+            <div className="hidden md:flex flex-row items-end">
               <Avatar src={user.result.picture} alt={user.result.name}>{user.result.name.charAt(0)}</Avatar>
               <Typography color="white"  sx={{ marginX: "16px"}}>{user.result.name}</Typography>
               <Button variant="contained" color="primary" onClick={logout}>Logout</Button>
