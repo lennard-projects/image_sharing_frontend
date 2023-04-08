@@ -12,6 +12,7 @@ const Navbar = () => {
   const navigate = useNavigate()
   const location = useLocation()
   const getUrl = window.location.href
+  const [ toggle, setToggle ] = useState(false)
   const removeAddPost = 'https://image-sharing-application.netlify.app/createPost'
   const logout = () => {
     dispatch({ type: LOGOUT })
@@ -49,9 +50,21 @@ const Navbar = () => {
           </Link>
           </>
         }
-          <Avatar src={user.result.picture} alt={user.result.name}>{user.result.name.charAt(0)}</Avatar>
-          <Typography color="white"  sx={{ marginX: "16px"}}>{user.result.name}</Typography>
-          <Button variant="contained" color="primary" onClick={logout}>Logout</Button>
+            <div className="flex md:hidden flex-col min-w-[80px] items-end">
+                <button className="p-1 hover:bg-tertiary rounded-md" onClick={() => setToggle((prev) => !prev)}>
+                  <Avatar src={user.result.picture} alt={user.result.name}>{user.result.name.charAt(0)}</Avatar>
+                </button>
+              <div className={`${toggle ? 'flex' : 'hidden'} flex-col bg-tertiary rounded-xl p-4 mt-7 absolute shadow-md`}>
+                <button className="mt-1 font-poppins text-[16px] text-white">Edit</button>
+                <div className="border-t-[1px] border-grayBorder m-2"></div>
+                <button className="mt-1 font-poppins text-[16px] text-white">Delete</button>
+              </div>
+            </div>
+            <div className="hidden md:flex flex-col min-w-[280px] items-end">
+              <Avatar src={user.result.picture} alt={user.result.name}>{user.result.name.charAt(0)}</Avatar>
+              <Typography color="white"  sx={{ marginX: "16px"}}>{user.result.name}</Typography>
+              <Button variant="contained" color="primary" onClick={logout}>Logout</Button>
+            </div>
         </>
         ) : (
           <Link to='/auth'>
